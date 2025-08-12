@@ -8,7 +8,7 @@ def send_mail(username,msg):
 
     context=ssl.create_default_context()
 
-    msg=f"From {username} \n\n\n {msg}"
+    msg=f"From {username}{msg}"
 
     with smtplib.SMTP_SSL(host,port,context=context) as server:
         server.login(tomail,password)
